@@ -1,8 +1,8 @@
 name: CI Pipeline
 on:
   push:
-    branches:[ "main" ]
-    pull_request:
+    branches: [ "main" ]
+  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -19,4 +19,4 @@ jobs:
         python-version: "3.10"
 
     - name: Run tests
-      run: python -m unittest discover -s . -p "test_.py"
+      run: python -m unittest discover -s . -p "test_main.py"
